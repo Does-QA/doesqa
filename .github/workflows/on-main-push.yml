@@ -49,9 +49,21 @@ jobs:
 
       - name: Bump version and Publish to NPM
         if: github.ref == 'refs/heads/main'
+        id: bump_version
         run: |
           npm version patch
           npm publish
           git push --follow-tags
+          echo "::set-output name=NEW_VERSION::$(node -p "require('./package.json').version")"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create GitHub Release
+        if: github.ref == 'refs/heads/main'
+        uses: ncipollo/release-action@v1
+        with:
+          tag: v${{ steps.bump_version.outputs.NEW_VERSION }}
+          name: Release ${{ steps.bump_version.outputs.NEW_VERSION }}
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
