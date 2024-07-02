@@ -33,17 +33,22 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "${{ github.event.head_commit.committer.email }}"
+          git config --global user.name "${{ github.event.head_commit.committer.name }}"
+
       - name: Lint and Test
         run: |
           npm run lint &
           npm run test &
           wait
 
-      - name: Bump version
-        run: npm version patch
-
-      - name: Publish to NPM
+      - name: Bump version and Publish to NPM
         if: github.ref == 'refs/heads/main'
-        run: npm publish
+        run: |
+          npm version patch
+          npm publish
+          git push --follow-tags
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
