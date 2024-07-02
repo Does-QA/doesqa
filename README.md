@@ -1,5 +1,10 @@
 # DoesQA Code Companion
 
+[![DoesQA Code Companion](https://img.shields.io/badge/DoesQA-Code%20Companion-blue)](https://does.qa/code-companion)
+![Build](https://img.shields.io/github/actions/workflow/status/Does-QA/doesqa/on-main-push.yml?branch=main&label=Build%20Status)
+![Unit Tests](https://img.shields.io/github/actions/workflow/status/Does-QA/doesqa/run-unit-tests.yml?branch-main&label=Unit%20Tests)
+[![License](https://img.shields.io/npm/l/doesqa.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/npm/v/doesqa.svg)](https://www.npmjs.com/package/doesqa)
 ## Overview
 
 **DoesQA** code companion, supercharging your test automation packs with cutting-edge capabilities:
