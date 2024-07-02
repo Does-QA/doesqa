@@ -44,6 +44,9 @@ jobs:
           npm run test &
           wait
 
+      - name: Authenticate with NPM
+        run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+
       - name: Bump version and Publish to NPM
         if: github.ref == 'refs/heads/main'
         run: |
