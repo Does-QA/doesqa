@@ -1,4 +1,4 @@
-name: On Push (main)
+name: Run Unit Tests
 
 on:
   schedule:
@@ -6,6 +6,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
