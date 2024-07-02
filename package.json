@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/username/my-typescript-package.git"
+    "url": "git+https://github.com/Does-QA/doesqa.git"
   },
   "keywords": [
     "typescript",
