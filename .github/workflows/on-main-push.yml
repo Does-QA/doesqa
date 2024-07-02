@@ -54,7 +54,7 @@ jobs:
           npm version patch
           npm publish
           git push --follow-tags
-          echo "::set-output name=NEW_VERSION::$(node -p "require('./package.json').version")"
+          echo "NEW_VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -62,8 +62,9 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: ncipollo/release-action@v1
         with:
-          tag: v${{ steps.bump_version.outputs.NEW_VERSION }}
-          name: Release ${{ steps.bump_version.outputs.NEW_VERSION }}
-          generate_release_notes: true
+          tag: v${{ env.NEW_VERSION }}
+          name: Release ${{ env.NEW_VERSION }}
+          generateReleaseNotes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NEW_VERSION: ${{ env.NEW_VERSION }}
