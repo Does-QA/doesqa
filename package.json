@@ -1,0 +1,52 @@
+{
+  "name": "doesqa",
+  "version": "1.0.1",
+  "description": "DoesQA Code Companion",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "test": "mocha --loader ts-node/esm 'test/**/*.spec.ts'",
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/my-typescript-package.git"
+  },
+  "keywords": [
+    "typescript",
+    "npm",
+    "package",
+    "doesqa",
+    "test automation",
+    "code companion",
+    "qa"
+  ],
+  "author": "DoesQA Ltd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Does-QA/doesqa/issues"
+  },
+  "homepage": "https://github.com/Does-QA/doesqa#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/lodash": "^4.17.6",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^20.14.9",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "chai": "^5.1.1",
+    "eslint": "^8.57.0",
+    "esm": "^3.2.25",
+    "mocha": "^10.6.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.5.3"
+  }
+}
