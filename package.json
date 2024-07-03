@@ -1,6 +1,6 @@
 {
   "name": "doesqa",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "DoesQA Code Companion",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
