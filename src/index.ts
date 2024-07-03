@@ -2,27 +2,24 @@ import { Email } from './email';
 import { MFA } from './mfa';
 
 type RunnerType = 'playwright' | 'cypress';
-
+type Runner = { todo: "add runner type"}
 export class CodeCompanion {
     email: Email;
     mfa: MFA;
-    runner: any;
+    runner: Runner;
     runnerType: RunnerType;
 
-    constructor(runner: any) {
+    constructor(runner: Runner) {
         this.email = new Email();
         this.mfa = new MFA();
         this.runner = runner;
         this.runnerType = this.detectRunnerType(runner);
     }
 
-    private detectRunnerType(runner: any): RunnerType {
-        if (runner.hasOwnProperty('browser') && runner.hasOwnProperty('context')) {
+    private detectRunnerType(runner: Runner): RunnerType {
+        if(runner) {
             return 'playwright';
-        } else if (runner.hasOwnProperty('cy')) {
-            return 'cypress';
-        } else {
-            throw new Error('Unknown runner');
         }
+        return 'playwright';
     }
 }

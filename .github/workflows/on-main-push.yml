@@ -38,11 +38,13 @@ jobs:
           git config --global user.email "${{ github.event.head_commit.committer.email }}"
           git config --global user.name "${{ github.event.head_commit.committer.name }}"
 
-      - name: Lint and Test
+      - name: Lint
         run: |
-          npm run lint &
-          npm run test &
-          wait
+          npm run lint
+
+      - name: Test
+        run: |
+          npm run test
 
       - name: Authenticate with NPM
         run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
