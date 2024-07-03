@@ -11,7 +11,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "experimentalDecorators": true,
-    "types": ["node", "jest", "lodash", "mocha", "chai"]
+    "types": ["node", "lodash", "mocha", "chai"]
   },
   "include": ["src"],
   "exclude": ["node_modules", "test", "dist"]
