@@ -53,6 +53,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         id: bump_version
         run: |
+          git reset --hard # Reset any changes to repo, to allow the patch version to be bumped
           npm version patch
           npm publish
           git push --follow-tags
