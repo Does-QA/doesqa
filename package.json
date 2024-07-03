@@ -10,7 +10,6 @@
   ],
   "scripts": {
     "test": "mocha --loader ts-node/esm 'test/**/*.spec.ts'",
-    "pretest": "npx playwright install",
     "build": "rm -rf ./dist && tsc",
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext .ts",
