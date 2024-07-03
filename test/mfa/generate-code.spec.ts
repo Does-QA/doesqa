@@ -1,7 +1,7 @@
 import { CodeCompanion } from '../../src';
 import chai from 'chai';
 
-describe('Create Email Address', () => {
+describe('Generate MFA Code', () => {
     let expect: typeof chai.expect;
 
     before(async () => {
@@ -26,20 +26,9 @@ describe('Create Email Address', () => {
                 doesqa = new CodeCompanion(runner);
             });
 
-            it('should create an email address', () => {
-                const email = doesqa.email.createEmailAddress(12345);
-                expect(email).to.equal('t+cc_12345@doesqa.email');
-            });
-
-            it('should return a random email if no seed is sent', () => {
-                const email = doesqa.email.createEmailAddress();
-                // Example: t+cc_1719956650158@doesqa.email
-                expect(email).to.match(/t\+cc_\d+@doesqa\.email/);
-            });
-
-            it('should error if the seed is not a number', () => {
-                // @ts-ignore
-                expect(() => doesqa.email.createEmailAddress('abc')).to.throw('Seed must be a number');
+            it('should generate a static code', async () => {
+                const mfa = await doesqa.mfa.generateCode();
+                expect(mfa).to.equal(123456);
             });
         });
     };

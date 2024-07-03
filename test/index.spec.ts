@@ -1,7 +1,7 @@
 import { CodeCompanion } from '../src';
 import chai from 'chai';
 
-describe('CodeCompanion Class', () => {
+describe('Code Companion Class', () => {
     let expect: typeof chai.expect;
 
     before(async () => {
@@ -9,13 +9,42 @@ describe('CodeCompanion Class', () => {
         expect = chai.expect;
     });
 
-    it('should create an instance of CodeCompanion', () => {
-        const client = new CodeCompanion();
-        expect(client).to.be.an.instanceof(CodeCompanion);
+    const mockPlaywrightRunner = {
+        browser: {},
+        context: {},
+    };
+
+    const mockCypressRunner = {
+        cy: {},
+    };
+
+    const runTests = (runnerType: 'playwright' | 'cypress', runner: any) => {
+        describe(`Running tests with ${runnerType}`, () => {
+            let doesqa: CodeCompanion;
+
+            before(() => {
+                doesqa = new CodeCompanion(runner);
+            });
+
+            it('should create an instance of CodeCompanion', () => {
+                expect(doesqa).to.be.an.instanceof(CodeCompanion);
+            });
+
+            it('should have an email property', () => {
+                expect(doesqa.email).to.be.an('object');
+            });
+
+            it('should have an mfa property', () => {
+                expect(doesqa.mfa).to.be.an('object');
+            });
+        });
+    };
+
+    describe('Playwright', () => {
+        runTests('playwright', mockPlaywrightRunner);
     });
 
-    it('should have an email property', () => {
-        const client = new CodeCompanion();
-        expect(client.email).to.be.an('object');
+    describe('Cypress', () => {
+        runTests('cypress', mockCypressRunner);
     });
 });

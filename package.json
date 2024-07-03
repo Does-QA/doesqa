@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "test": "mocha --loader ts-node/esm 'test/**/*.spec.ts'",
+    "pretest": "npx playwright install",
     "build": "rm -rf ./dist && tsc",
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext .ts",
@@ -45,9 +46,12 @@
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "chai": "^5.1.1",
+    "cypress": "^13.13.0",
     "eslint": "^8.57.0",
     "esm": "^3.2.25",
     "mocha": "^10.6.0",
+    "mocha-sinon": "^2.1.2",
+    "playwright": "^1.45.1",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.5.3"
