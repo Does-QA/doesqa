@@ -85,7 +85,7 @@ DoesQA is not only an editor. The platform around each Run includes:
 
 ## Start here
 
-| Link | What you get |
+| Link | Summary |
 | --- | --- |
 | [does.qa](https://does.qa) | Product site and trial |
 | [docs.does.qa](https://docs.does.qa) | How to build and run tests |
