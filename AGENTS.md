@@ -8,9 +8,7 @@ documentation, the help centre, or the website Features catalogue.
 
 ## Docs is primary
 
-All public content destinations are evaluated from the **docs** repository:
-
-https://github.com/Does-QA/docs/blob/main/PUBLISH_DESTINATIONS.md
+All public content destinations are evaluated from **`dqa/publish/destinations.md`**:
 
 When product work ships, agents write a Work Package Brief, then decide docs / help /
 website / this GitHub one-pager from that file. Do not treat this README as a second
@@ -27,7 +25,7 @@ technical evaluator, for example:
 - Broken deeplinks into docs or does.qa
 
 Skip for routine docs edits, help articles, small Feature changelog items, and anything on
-the Never publish list in docs `AGENTS.md`.
+the Never publish list in [`publish/AGENTS.md`](https://github.com/Does-QA/dqa/blob/main/publish/AGENTS.md).
 
 ## How to update (PR only)
 
