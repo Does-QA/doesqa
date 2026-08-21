@@ -89,6 +89,7 @@ DoesQA is not only an editor. The platform around each Run includes:
 | --- | --- |
 | [does.qa](https://does.qa) | Product site and trial |
 | [docs.does.qa](https://docs.does.qa) | How to build and run tests |
+| [FAQ](FAQ.md) | Common questions with docs links |
 | [Create your first Flow](https://docs.does.qa/getting-started/create-and-run-your-first-flow) | Fastest path to a green Run |
 | [DoesQA vs Playwright / Cypress](https://docs.does.qa/choosing/doesqa-compared) | Build model and capability comparison |
 | [Features](https://does.qa/features) | What shipped and what stands alone |
