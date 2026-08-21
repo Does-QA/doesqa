@@ -1,6 +1,6 @@
-# FAQ for evaluators
+# FAQ
 
-Short answers for technical evaluation. Full detail lives in the docs; this page points there.
+Common questions about DoesQA, answered briefly, with links into the docs for the full story.
 
 ## How resilient are DoesQA tests to changes in the application?
 
