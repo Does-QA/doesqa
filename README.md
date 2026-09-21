@@ -35,7 +35,7 @@ If you already know Playwright or Cypress: DoesQA is the product teams often end
 - **Runners included.** Parallel execution on fresh machines, without standing up browser farms.
 - **Journeys that match production.** Email inboxes, MFA codes, APIs, files, tabs, frames, payments flows, and more live as first-class Test Steps.
 - **CI that reports like CI.** Start Runs from GitHub, GitLab, Bitbucket, Azure, or any HTTP client. Get Checks, summaries, and Slack or Teams alerts when you need them.
-- **Optional AI that stays in DoesQA.** Summaries, Suggestions, Automatic Elements, and an in-app Assistant. Models and data stay inside DoesQA (UK datacentre). Powerful, and fully optional.
+- **Optional AI that stays in DoesQA.** Summaries, Suggestions, Automatic Elements, and an in-app Assistant. [MCP](https://docs.does.qa/doesqa-ai/mcp) and the [CLI](https://docs.does.qa/doesqa-ai/cli) let coding agents work in your account while people review Flows and Runs in DoesQA. Models and data stay inside DoesQA (UK datacentre). Powerful, and fully optional.
 - **Maintenance that scales.** **Elements**, **Values**, **Step Groups**, and **Run Recipes** keep packs coherent as the product changes.
 
 ## How you build
@@ -75,7 +75,7 @@ DoesQA is not only an editor. The platform around each Run includes:
 - **Schedules** for recurring coverage
 - **Notifications** to email, Slack, Microsoft Teams, and outbound webhooks
 - **Integrations** to start Runs from CI and automation tools ([Universal Webhook](https://docs.does.qa/platform/integrations/universal-webhook), [GitHub Action](https://docs.does.qa/platform/integrations/github), [GitLab](https://docs.does.qa/platform/integrations/gitlab), and more)
-- **[DoesQA AI](https://docs.does.qa/platform/doesqa-ai)** for faster triage, Element setup, Suggestions, and agent-assisted authoring when you want it
+- **[DoesQA AI](https://docs.does.qa/doesqa-ai)** for faster triage, Element setup, Suggestions, and [MCP](https://docs.does.qa/doesqa-ai/mcp) / [CLI](https://docs.does.qa/doesqa-ai/cli) agent access when you want it
 
 ## Who it is for
 

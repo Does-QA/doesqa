@@ -48,7 +48,15 @@ Runs stay deterministic. Pass and fail come from real browsers, stored Selectors
 Steps. DoesQA AI speeds triage and setup; it is optional and can be turned off. The intentional
 exception is AI Vision, which you add as an explicit Step when you want a visual Check.
 
-Docs: [DoesQA AI](https://docs.does.qa/platform/doesqa-ai)
+Docs: [DoesQA AI](https://docs.does.qa/doesqa-ai)
+
+## Can an AI coding agent work in DoesQA?
+
+Yes. Connect an MCP-capable agent (or the DoesQA CLI) with a scoped token for your user and
+account. The agent can author Flows, start Runs, ask the in-app Assistant, and store durable
+memory. You review the work as product data in DoesQA.
+
+Docs: [MCP](https://docs.does.qa/doesqa-ai/mcp) · [CLI](https://docs.does.qa/doesqa-ai/cli)
 
 ## Show me what the same test looks like in DoesQA and Playwright
 
