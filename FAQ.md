@@ -52,9 +52,7 @@ Docs: [DoesQA AI](https://docs.does.qa/doesqa-ai)
 
 ## Can an AI coding agent work in DoesQA?
 
-Yes. Connect an MCP-capable agent (or the DoesQA CLI) with a scoped token for your user and
-account. The agent can author Flows, start Runs, ask the in-app Assistant, and store durable
-memory. You review the work as product data in DoesQA.
+Yes. Connect an MCP-capable agent (or the DoesQA CLI) with an [Access token](https://docs.does.qa/doesqa-ai/doesqa-ai/access-tokens). Each token belongs to one person on one account, so you can see who connected an agent and stop it instantly. The agent can author Flows, start Runs, ask the in-app Assistant, and store durable memory. You review the work as product data in DoesQA.
 
 Docs: [MCP](https://docs.does.qa/doesqa-ai/mcp) · [CLI](https://docs.does.qa/doesqa-ai/cli)
 
